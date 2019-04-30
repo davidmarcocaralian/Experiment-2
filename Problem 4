@@ -1,0 +1,56 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	//Problem 4
+
+	double n1, n2, n3;
+
+	cout << "Enter First Number: "; cin >> n1;
+	cout << "Enter Second Number: "; cin >> n2;
+	cout << "Enter Third Number: "; cin >> n3;
+	cout << endl;
+
+	if (n1 > n2 && n1 > n3)
+	{
+		cout << "The LARGEST of the three numbers is " << n1;
+	}
+	else if (n2 > n1 && n2 > n3)
+	{
+		cout << "The LARGEST of the three numbers is " << n2;
+	}
+	else if (n3 > n1 && n3 > n2)
+	{
+		cout << "The LARGEST of the three numbers is " << n3;
+	}
+	else if (n1 == 0 && n2 == 0 && n3 == 0)
+	{
+		cout << "There is no LARGE number of the three";
+	}
+	else if (n1 == n2 && n2 == n3)
+	{
+		cout << "All numbers are equal";
+	}
+	else if (n1 == n2)
+	{
+		cout << "The First and Second number are equal and is Larger than the Third";
+	}
+	else if (n1 == n3)
+	{
+		cout << "The First and Third number are equal and is Larger than the Second";
+	}
+	else if (n2 == n3)
+	{
+		cout << "The Second and Third number are equal and is Larger than the First";
+	}
+	
+
+	_getch();
+	return 0;
+} 
