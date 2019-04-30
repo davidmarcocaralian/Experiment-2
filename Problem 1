@@ -1,0 +1,84 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	
+	//Problem 1
+
+	char package;
+	double hours;
+
+	cout << "Enter Package Availed: "; cin >> package;
+	cout << "Hours Used: "; cin >> hours;
+	cout << endl;
+
+	switch (package)
+	{
+	case 'a':
+	case 'A':
+		cout << "Package Availed: Package A" << endl;
+		cout << "For P995/mo 10 hrs of access are provided. Additional hours are P20/hr." << endl;
+		cout << endl;
+
+		if (hours == 10)
+		{
+			cout << "Total Amount Due: P 995" << endl;
+			cout << "Note: Number of hours for the Package availed are used" << endl;
+		}
+		else if (hours < 10)
+		{
+			cout << "Total Amount Due: P 995" << endl;
+			cout << "Hours Remaining: " << (10 - hours) << " hours";
+		}
+		else if (hours > 10)
+		{
+			cout << "Hours Exceeded: " << (hours - 10) << " hours" << endl;
+			cout << "Total Amount: " << "P " << ((hours - 10) * 20) + 995;
+		}
+
+		break;
+	case 'b':
+	case 'B':
+		cout << "Package Availed: Package B" << endl;
+		cout << "For P1495/mo 20 hrs of access are provided. Additional hours are P10/hr." << endl;
+		cout << endl;
+
+		if (hours == 20)
+		{
+			cout << "Total Amount Due: P 1495" << endl;
+			cout << "Note: Number of hours for the Package availed are used" << endl;
+		}
+		else if (hours < 20)
+		{
+			cout << "Total Amount Due: P 1495" << endl;
+			cout << "Hours Remaining: " << (20 - hours) << " hours";
+		}
+		else if (hours > 20)
+		{
+			cout << "Hours Exceeded: " << (hours - 20) << " hours" << endl;
+			cout << "Total Amount: " << "P " << ((hours - 20) * 10) + 1495;
+		}
+
+		break;
+	case 'c':
+	case 'C':
+		cout << "Package Availed: Package C" << endl;
+		cout << "For P1995/mo of unlimited access is provided." << endl;
+		cout << endl;
+
+		cout << "Total Amount Due: P 1995" << endl;
+		break;
+
+	default:
+		cout << "Invalid Input";
+	}
+
+
+	_getch();
+	return 0;
+}
