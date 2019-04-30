@@ -1,0 +1,71 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	//Problem 3
+
+	int x;
+	int y;
+	double z = 2.5;
+	double v;
+
+	cout << "Enter Number for (x): "; cin >> x;
+	cout << "Enter Number for (y): "; cin >> y;
+	cout << "Constant Number for (z) = 2.5";
+	cout << endl;
+
+	switch (x)
+	{
+	case 1:
+		if (y < 5 && y > 1)
+		{
+			v = x * y * z;
+			cout << "\nV = xyz" << endl;
+			cout << "V = " << setw(10) << setprecision(2) << fixed << v;
+		}
+		else if (y >= 5)
+		{
+			v = x + (y / z);
+			cout << "\nV = x + y/z" << endl;
+			cout << "V = " << setw(10) << setprecision(2) << fixed << v;
+		}
+		else if (y <= 1)
+		{
+			v = x + y + z;
+			cout << "\nV = x + y + z" << endl;
+			cout << "V = " << setw(10) << setprecision(2) << fixed << v;
+		}
+		break;
+	case 2:
+		if (y <= 5)
+		{
+			v = abs((x - y) / z);
+			cout << "\nV = |(x - y)/z|" << endl;
+			cout << "V = " << setw(10) << setprecision(2) << fixed << v;
+		}
+		else if (y > 5)
+		{
+			v = x - (sqrt(y + z));
+			cout << "\nV = x - (sqrt(y + z))" << endl;
+			cout << "V = " << setw(10) << setprecision(2) << fixed << v;
+		}
+		break;
+	default: 
+		if (x > 2 || x < 0)
+		{ 
+			cout << endl;
+			v = x + y + z;
+			cout << "V = x + y + z" << endl;
+			cout << "V = " << setw(10) << setprecision(2) << fixed << v;
+		}
+		break;
+	}
+
+	_getch();
+	return 0;
+}
