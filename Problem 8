@@ -1,0 +1,31 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	//Problem 8
+
+	int product;
+	int number;
+	int i;
+
+	cout << "Enter number: "; cin >> number;
+	cout << endl;
+	cout << "Multiplication Table of " << number << ": " << endl;
+	cout << endl;
+
+	for (i = 1; i <= 10; i++) 
+	{
+		product = 0;
+		product = number * i;
+		cout << number << " * " << i << " = " << product << endl;
+	}
+
+	_getch();
+	return 0;
+}
