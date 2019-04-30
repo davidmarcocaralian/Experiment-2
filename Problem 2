@@ -1,0 +1,47 @@
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+#include <string>
+ 
+using namespace std;
+
+int main()
+{
+
+	char answer;
+	double previousBill, gallonsUsed;
+	int waterCharge = 35;
+	int lateCharge = 20;
+	double waterPrice = 1.10;
+	
+	cout << "Is your previous monthly water bill paid? [Y] or [N]: "; cin >> answer;
+
+	switch (answer)
+	{
+	case 'Y':
+	case 'y':
+		cout << "\nGallons Used: "; cin >> gallonsUsed;
+		cout << "\nPrevious Monthly Water Bill Status: Paid" << endl;
+		cout << "\nWater Demand Charge: P " << waterCharge << endl;
+		cout << "Basic Charge for Gallons Used: P " << gallonsUsed * waterPrice << endl;
+		cout << "-------------------------------------------" << endl; 
+		cout << "Total Water Bill: P " << waterCharge + (gallonsUsed * waterPrice);
+		break;
+
+	case 'N':
+	case 'n':
+		cout << "\nPrevious Monthly Bill: P"; cin >> previousBill;
+		cout << "Gallons Used: "; cin >> gallonsUsed;
+		cout << "\nPrevious Monthly Water Bill Status: Unpaid" << endl;
+		cout << "\nUnpaid Balance: P " << previousBill << endl;
+		cout << "Water Demand Charge: P " << waterCharge << endl;
+		cout << "Unpaid Balance Charge: P " << lateCharge << endl;
+		cout << "Basic Charge for Gallons Used: P " << gallonsUsed * waterPrice << endl;
+		cout << "-------------------------------------------" << endl;
+		cout << "Total Water Bill: P " << waterCharge + (gallonsUsed * waterPrice) + previousBill + lateCharge;
+		break;
+	} 
+
+	_getch();
+	return 0;
+}
