@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	//Problem 9
+
+	int columns;
+	int rows;
+
+	cout << "Enter Rows: "; cin >> rows;
+	cout << "Enter Columns: "; cin >> columns;
+	cout << endl;
+
+	int i, j;
+
+	for (i = 1; i <= rows; i++)
+	{
+		for (j = 1; j <= columns; j++)
+		{
+		cout << "* ";
+		}
+		cout << endl;
+	}
+
+	_getch();
+	return 0;
+
+}
